@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --twilight: #3C2F80;
+    --hyacinth: #7D52F4;
+    --sage: #52796F;
+    --sage-light: #EBF3EE;
+    --slate: #121026;
+    --chalk: #F7F7FA;
+    --warm-sand: #F4EFEA;
+  }
+
+  body {
+    font-family: 'Roboto Flex', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #F7F7FA;
+    color: #121026;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F7F7FA;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c9c4d2;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7D52F4;
+  }
+}
+
+.brand-shadow {
+  box-shadow: 0 8px 30px rgba(60, 47, 128, 0.06), 0 1px 3px rgba(18, 16, 38, 0.03);
+}
+
+.brand-shadow-lg {
+  box-shadow: 0 20px 48px rgba(60, 47, 128, 0.12), 0 4px 12px rgba(18, 16, 38, 0.04);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(60, 47, 128, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(60, 47, 128, 0.07);
+}
+
+.label-caps {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.label-metric {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+}

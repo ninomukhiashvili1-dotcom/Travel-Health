@@ -1,0 +1,198 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { ChecklistItem } from '../types';
+
+export const DEFAULT_CHECKLIST_ITEMS: ChecklistItem[] = [
+  // Medications
+  {
+    id: 'chk-1',
+    title: 'Primary Prescription Medications (Original Pharmacy Containers)',
+    category: 'Medications',
+    priority: 'High',
+    packed: true,
+    notes: 'Must match passport name exactly. Carry in hand luggage with doctor prescription letter.',
+    tsaCompliant: true,
+  },
+  {
+    id: 'chk-2',
+    title: 'Traveler’s Diarrhea First-Line Treatment & ORS Electrolytes',
+    category: 'Medications',
+    priority: 'High',
+    packed: true,
+    notes: 'Loperamide / Bismuth subsalicylate + WHO oral rehydration packets.',
+    tsaCompliant: true,
+  },
+  {
+    id: 'chk-3',
+    title: 'Broad-Spectrum Antihistamine (Cetirizine / Fexofenadine)',
+    category: 'Medications',
+    priority: 'Medium',
+    packed: false,
+    notes: 'For seasonal pollen spikes, food allergen responses, or insect bites.',
+    tsaCompliant: true,
+  },
+  {
+    id: 'chk-4',
+    title: 'Analgesics & Anti-Inflammatory (Paracetamol / Ibuprofen)',
+    category: 'Medications',
+    priority: 'Medium',
+    packed: true,
+    notes: 'Essential for cabin headache, joint soreness, and low-grade pyrexia.',
+    tsaCompliant: true,
+  },
+  {
+    id: 'chk-5',
+    title: 'Motion Sickness Prophylaxis (Dimenhydrinate or Scopolamine Patches)',
+    category: 'Medications',
+    priority: 'Medium',
+    packed: false,
+    notes: 'Apply patch 4 hours before embarkation on boat charters or mountain roads.',
+    tsaCompliant: true,
+  },
+
+  // Vaccines & Records
+  {
+    id: 'chk-6',
+    title: 'International Certificate of Vaccination or Prophylaxis (ICVP - Yellow Card)',
+    category: 'Vaccines',
+    priority: 'High',
+    packed: false,
+    notes: 'Strict entry requirement in select African and South American nations.',
+    tsaCompliant: true,
+  },
+  {
+    id: 'chk-7',
+    title: 'Routine Booster Validation (Tetanus-Diphtheria-Pertussis <10 yrs)',
+    category: 'Vaccines',
+    priority: 'High',
+    packed: true,
+    notes: 'Crucial for outdoor trekking and minor puncture lacerations.',
+    tsaCompliant: true,
+  },
+  {
+    id: 'chk-8',
+    title: 'Destination-Specific Vaccines (Hepatitis A, Typhoid, TBE)',
+    category: 'Vaccines',
+    priority: 'High',
+    packed: true,
+    notes: 'Administer at least 14 days before departure for optimal antibody seroconversion.',
+    tsaCompliant: true,
+  },
+
+  // Circadian & Sleep
+  {
+    id: 'chk-9',
+    title: 'Sublingual Micro-dose Melatonin (0.5mg – 1mg)',
+    category: 'Circadian & Sleep',
+    priority: 'High',
+    packed: true,
+    notes: 'Shift sleep-wake rhythm without next-day grogginess.',
+    tsaCompliant: true,
+  },
+  {
+    id: 'chk-10',
+    title: 'Contoured 100% Blackout Sleep Mask',
+    category: 'Circadian & Sleep',
+    priority: 'High',
+    packed: true,
+    notes: 'Essential for subarctic midnight sun and daytime cabin napping.',
+    tsaCompliant: true,
+  },
+  {
+    id: 'chk-11',
+    title: 'Circadian Phase Blue-Blocker Glasses',
+    category: 'Circadian & Sleep',
+    priority: 'Medium',
+    packed: false,
+    notes: 'Wear during evening red-eye flight segments to trigger endogenous melatonin.',
+    tsaCompliant: true,
+  },
+  {
+    id: 'chk-12',
+    title: 'Magnesium Glycinate or L-Theanine Sleep Matrix',
+    category: 'Circadian & Sleep',
+    priority: 'Medium',
+    packed: false,
+    notes: 'Supports deep restorative slow-wave sleep in new hotel environments.',
+    tsaCompliant: true,
+  },
+
+  // Gear & Environment
+  {
+    id: 'chk-13',
+    title: 'Graduated Medical Compression Socks (15-20 mmHg)',
+    category: 'Gear & Environment',
+    priority: 'High',
+    packed: true,
+    notes: 'Prevents dependent edema and venous pooling on flights >4 hours.',
+    tsaCompliant: true,
+  },
+  {
+    id: 'chk-14',
+    title: 'Broad-Spectrum Mineral Sunscreen SPF 50+ & UV Lip Balm',
+    category: 'Gear & Environment',
+    priority: 'High',
+    packed: false,
+    notes: 'UV radiation increases ~10% per 1,000m elevation gain.',
+    tsaCompliant: true,
+  },
+  {
+    id: 'chk-15',
+    title: 'Micro-Encapsulated 20% Picaridin or 30% DEET Insect Repellent',
+    category: 'Gear & Environment',
+    priority: 'High',
+    packed: false,
+    notes: 'Primary defense against daytime Aedes and nighttime Anopheles vectors.',
+    tsaCompliant: true,
+  },
+  {
+    id: 'chk-16',
+    title: 'Sterile Nasal Saline Spray with Ectoin / Hyaluronic Acid',
+    category: 'Gear & Environment',
+    priority: 'Medium',
+    packed: true,
+    notes: 'Restores nasal mucosal barrier against airborne pathogens in 10% cabin air.',
+    tsaCompliant: true,
+  },
+  {
+    id: 'chk-17',
+    title: 'Portable UV-C or Hollow Fiber Water Filter Straw',
+    category: 'Gear & Environment',
+    priority: 'Medium',
+    packed: false,
+    notes: 'For wilderness trail emergencies and unverified water sources.',
+    tsaCompliant: true,
+  },
+
+  // Documents
+  {
+    id: 'chk-18',
+    title: 'Emergency Medical & Travel Evacuation Insurance Card (Digital & Physical)',
+    category: 'Documents',
+    priority: 'High',
+    packed: true,
+    notes: 'Ensure policy covers international air ambulance repatriation ($250k+).',
+    tsaCompliant: true,
+  },
+  {
+    id: 'chk-19',
+    title: 'Doctor Cross-Border Prescription Attestation & Drug Generic Names',
+    category: 'Documents',
+    priority: 'High',
+    packed: true,
+    notes: 'List international non-proprietary names (INN) for customs clearance.',
+    tsaCompliant: true,
+  },
+  {
+    id: 'chk-20',
+    title: 'Voyage Compass Digital Medical ID Card (Offline QR / Wallet)',
+    category: 'Documents',
+    priority: 'High',
+    packed: false,
+    notes: 'Stores blood group, chronic conditions, and emergency contact in local language.',
+    tsaCompliant: true,
+  },
+];

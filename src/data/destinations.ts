@@ -1,0 +1,613 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { Destination } from '../types';
+
+export const DESTINATIONS_DATA: Destination[] = [
+  {
+    id: 'kyoto',
+    name: 'Kyoto & Kansai Region',
+    country: 'Japan',
+    region: 'Asia',
+    tagline: 'Zen temple sanctuaries, bamboo groves, and ancient tea rituals',
+    description:
+      'A cultural haven of ancient wooden temples, serene rock gardens, and sacred cedar forests. Demands high walking endurance over cobblestone paths and strict circadian synchronization for trans-Pacific travelers.',
+    heroImage:
+      'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1600&q=85',
+    coordinates: '35.0116° N, 135.7681° E',
+    timezone: 'JST (UTC+9)',
+    utcOffset: 9,
+    altitudeMeters: 55,
+    overallHealthScore: 98,
+    waterSafety: {
+      status: 'Safe',
+      rating: 'safe',
+      notes: 'Municipal tap water is among the cleanest in the world; micro-filtered from Lake Biwa.',
+    },
+    airQuality: {
+      aqi: 22,
+      rating: 'Pristine',
+      pm25: '5.2 µg/m³',
+      primaryAllergen: 'Cryptomeria (Japanese cedar pollen in spring)',
+    },
+    climateRisk: {
+      uvIndex: 4,
+      humidity: '62%',
+      tempRange: '16°C – 24°C',
+      heatStressRisk: 'Low',
+    },
+    altitudeRisk: {
+      riskLevel: 'None',
+      advisory: 'Low-elevation valley basin. No barometric acclimatization needed.',
+    },
+    vaccines: {
+      mandatory: ['Routine MMR, DTaP, Polio'],
+      recommended: ['Japanese Encephalitis (if rural farm trekking)', 'Hepatitis A', 'Seasonal Influenza'],
+      endemicDiseases: ['Japanese Encephalitis (rural seasonal)', 'Cedar Pollen Rhinoconjunctivitis'],
+    },
+    healthAlerts: [
+      {
+        id: 'kyo-1',
+        level: 'Info',
+        title: 'Spring Cedar Pollen Peak',
+        summary: 'Elevated airborne cryptomeria counts detected in northern Arashiyama hills.',
+        date: 'Updated today',
+      },
+      {
+        id: 'kyo-2',
+        level: 'Advisory',
+        title: 'High Step-Count Ergonomics',
+        summary: 'Average temple visits exceed 18,000 steps daily. Pack arch-support footwear and electrolyte packets.',
+        date: 'Active',
+      },
+    ],
+    hospitals: [
+      {
+        name: 'Kyoto University Hospital International Care',
+        address: '54 Kawahara-cho, Shogoin, Sakyo-ku, Kyoto',
+        phone: '+81-75-751-3111',
+        englishProficient: true,
+        traumaCenter: true,
+        distance: '2.4 km from Gion',
+      },
+      {
+        name: 'Kyoto First Red Cross Hospital (Triage Center)',
+        address: '15-749 Honmachi, Higashiyama-ku, Kyoto',
+        phone: '+81-75-561-1121',
+        englishProficient: true,
+        traumaCenter: true,
+        distance: '1.8 km from Kyoto Station',
+      },
+    ],
+    circadianAdvice: {
+      direction: 'East',
+      recoveryDays: 4,
+      morningLight: '07:30 AM – 09:30 AM (crucial for resetting suprachiasmatic nucleus)',
+      eveningWindDown: '20:30 PM dim-light onset; hot onsen soak at 39°C',
+      melatoninTiming: '0.5mg – 1mg at 22:00 local time for 3 consecutive nights',
+    },
+  },
+  {
+    id: 'zermatt',
+    name: 'Zermatt & Matterhorn Valley',
+    country: 'Switzerland',
+    region: 'Europe',
+    tagline: 'High-alpine glaciers, pristine glacial air, and thermal rejuvenation',
+    description:
+      'Perched at 1,608 meters beneath the iconic Matterhorn, Zermatt offers clean car-free alpine air, steep vertical ascents up to 3,883m at Glacier Paradise, and rigorous thermal wellness traditions.',
+    heroImage:
+      'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1600&q=85',
+    coordinates: '45.9765° N, 7.7491° E',
+    timezone: 'CET (UTC+1)',
+    utcOffset: 1,
+    altitudeMeters: 1608,
+    overallHealthScore: 97,
+    waterSafety: {
+      status: 'Safe',
+      rating: 'safe',
+      notes: 'Direct glacial melt alpine water springs. Exceptionally mineralized and pure.',
+    },
+    airQuality: {
+      aqi: 12,
+      rating: 'Pristine',
+      pm25: '2.8 µg/m³',
+      primaryAllergen: 'Alpine pine (minimal)',
+    },
+    climateRisk: {
+      uvIndex: 8,
+      humidity: '44%',
+      tempRange: '-2°C – 14°C',
+      heatStressRisk: 'Low',
+    },
+    altitudeRisk: {
+      riskLevel: 'Moderate',
+      advisory: 'Base at 1,608m. Cable cars ascend rapidly to 3,883m. Hydrate 3.5L/day and avoid intense ascents on Day 1.',
+    },
+    vaccines: {
+      mandatory: ['Routine Tetanus/Diphtheria'],
+      recommended: ['Tick-Borne Encephalitis (TBE - for lower forest hikes)', 'Hepatitis A'],
+      endemicDiseases: ['Acute Mountain Sickness (AMS above 2,500m)', 'High-Altitude Snow Blindness / UV Keratitis'],
+    },
+    healthAlerts: [
+      {
+        id: 'zer-1',
+        level: 'Warning',
+        title: 'High Alpine UV Index on Glaciers',
+        summary: 'Snow reflectance amplifies UV exposure by 85%. Category 4 polarized glacier glasses required.',
+        date: 'Updated today',
+      },
+      {
+        id: 'zer-2',
+        level: 'Advisory',
+        title: 'Rapid Pressure Shifts at Klein Matterhorn',
+        summary: 'Ascending 2,200m in 40 minutes can trigger hypobaric hypoxia. Monitor SpO2 above 90%.',
+        date: 'Active',
+      },
+    ],
+    hospitals: [
+      {
+        name: 'Klinik Hirslanden Alpine Medical Centre Zermatt',
+        address: 'Hofmattstrasse 12, 3920 Zermatt',
+        phone: '+41-27-966-2000',
+        englishProficient: true,
+        traumaCenter: true,
+        distance: 'In village centre (Air Zermatt heli-transfer link)',
+      },
+      {
+        name: 'Spitalzentrum Oberwallis (Regional Hospital Visp)',
+        address: 'Pflanzettastrasse 8, 3930 Visp',
+        phone: '+41-27-604-3333',
+        englishProficient: true,
+        traumaCenter: true,
+        distance: '34 km (direct cogwheel rail link)',
+      },
+    ],
+    circadianAdvice: {
+      direction: 'Neutral',
+      recoveryDays: 1,
+      morningLight: '08:00 AM bright sun on balcony facing Matterhorn',
+      eveningWindDown: '21:00 PM alpine sauna followed by cold plunge',
+      melatoninTiming: 'Optional for jet lag, magnesium glycinate recommended for alpine sleep quality',
+    },
+  },
+  {
+    id: 'reykjavik',
+    name: 'Reykjavik & Golden Circle',
+    country: 'Iceland',
+    region: 'Europe',
+    tagline: 'Geothermal silica lagoons, subarctic tundra, and circadian extremes',
+    description:
+      'A land of stark basalt volcanic fields and geothermal hot springs. Travelers encounter dramatic day/night light cycles (Midnight Sun in summer, Polar Night in winter) demanding proactive circadian regulation.',
+    heroImage:
+      'https://images.unsplash.com/photo-1504893524553-b855bce32c67?auto=format&fit=crop&w=1600&q=85',
+    coordinates: '64.1466° N, 21.9426° W',
+    timezone: 'GMT (UTC+0)',
+    utcOffset: 0,
+    altitudeMeters: 15,
+    overallHealthScore: 99,
+    waterSafety: {
+      status: 'Safe',
+      rating: 'safe',
+      notes: 'Cold tap water is pure, untreated subarctic spring water. Hot water is geothermal (sulfur scent is normal).',
+    },
+    airQuality: {
+      aqi: 9,
+      rating: 'Pristine',
+      pm25: '1.9 µg/m³',
+      primaryAllergen: 'Minimal airborne pollen',
+    },
+    climateRisk: {
+      uvIndex: 2,
+      humidity: '78%',
+      tempRange: '2°C – 11°C',
+      heatStressRisk: 'Low',
+    },
+    altitudeRisk: {
+      riskLevel: 'None',
+      advisory: 'Sea level coastal plain. High wind chill and sudden hypothermia risks on lava fields.',
+    },
+    vaccines: {
+      mandatory: ['Standard WHO routine boosters'],
+      recommended: ['Influenza', 'Hepatitis B'],
+      endemicDiseases: ['Hypothermia & Exposure', 'Circadian Phase Delay (Summer Midnight Sun)'],
+    },
+    healthAlerts: [
+      {
+        id: 'ice-1',
+        level: 'Info',
+        title: 'Geothermal Silica Mineral Exposure',
+        summary: 'High mineral content in Blue Lagoon is beneficial for psoriasis but dry for eyes; rinse contact lenses.',
+        date: 'Updated today',
+      },
+    ],
+    hospitals: [
+      {
+        name: 'Landspitali University Hospital (Fossvogur Emergency)',
+        address: 'Fossvogur, 108 Reykjavik',
+        phone: '+354-543-1000',
+        englishProficient: true,
+        traumaCenter: true,
+        distance: '4 km from Downtown Reykjavik',
+      },
+    ],
+    circadianAdvice: {
+      direction: 'Neutral',
+      recoveryDays: 2,
+      morningLight: '10,000 lux light box in winter; 100% blackout sleep masks in summer',
+      eveningWindDown: '21:30 PM strict digital blackout to compensate for midnight sun',
+      melatoninTiming: '3mg at 22:30 PM during summer months',
+    },
+  },
+  {
+    id: 'costa-rica',
+    name: 'Arenal & Monteverde Cloud Forest',
+    country: 'Costa Rica',
+    region: 'Americas',
+    tagline: 'Biodiverse rainforest canopies, volcanic thermal springs, and blue zone longevity',
+    description:
+      'Home to the Nicoya Peninsula blue zone ethos, thermal hot springs, and dense bio-corridors. Requires rigorous vector protection against mosquito-borne illness and proactive gut microbiome support.',
+    heroImage:
+      'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=85',
+    coordinates: '10.4678° N, 84.7032° W',
+    timezone: 'CST (UTC-6)',
+    utcOffset: -6,
+    altitudeMeters: 620,
+    overallHealthScore: 89,
+    waterSafety: {
+      status: 'Bottled Recommended',
+      rating: 'caution',
+      notes: 'Urban areas safe; in rural Arenal & Osa jungle lodges, filtered or bottled water is advised.',
+    },
+    airQuality: {
+      aqi: 28,
+      rating: 'Pristine',
+      pm25: '6.4 µg/m³',
+      primaryAllergen: 'Tropical mold spores during green season',
+    },
+    climateRisk: {
+      uvIndex: 11,
+      humidity: '88%',
+      tempRange: '22°C – 31°C',
+      heatStressRisk: 'Moderate',
+    },
+    altitudeRisk: {
+      riskLevel: 'None',
+      advisory: 'Cloud forest summits reach 1,440m; safe for all cardiovascular profiles.',
+    },
+    vaccines: {
+      mandatory: ['Yellow Fever certificate (if arriving from endemic South America)'],
+      recommended: ['Hepatitis A', 'Typhoid', 'Tetanus booster', 'Rabies (if caving/handling wildlife)'],
+      endemicDiseases: ['Dengue Virus (seasonal)', 'Chikungunya', 'Zika (low risk)', "Traveler's Diarrhea"],
+    },
+    healthAlerts: [
+      {
+        id: 'cr-1',
+        level: 'Warning',
+        title: 'Tropical Dengue Advisory in Lowland Corridors',
+        summary: 'Picaridin or 30% DEET insect repellent recommended during dawn and dusk canopy walks.',
+        date: 'Updated today',
+      },
+      {
+        id: 'cr-2',
+        level: 'Advisory',
+        title: 'High Equatorial UV Index (11+)',
+        summary: 'Reapply coral-safe SPF 50 every 90 minutes when near thermal springs.',
+        date: 'Active',
+      },
+    ],
+    hospitals: [
+      {
+        name: 'Hospital CIMA San José (JCI Accredited)',
+        address: 'Autopista Próspero Fernández, Escazú, San José',
+        phone: '+506-2208-1000',
+        englishProficient: true,
+        traumaCenter: true,
+        distance: 'Direct ambulance link from Arenal (approx 2.5 hrs)',
+      },
+      {
+        name: 'Clinica San Jorge La Fortuna',
+        address: 'Diagonal a Iglesia Católica, La Fortuna',
+        phone: '+506-2479-9911',
+        englishProficient: true,
+        traumaCenter: false,
+        distance: '5 mins from Arenal town center',
+      },
+    ],
+    circadianAdvice: {
+      direction: 'West',
+      recoveryDays: 2,
+      morningLight: '06:00 AM natural jungle birdsong and morning canopy sunlight',
+      eveningWindDown: '19:30 PM natural dusk alignment; magnesium bisglycinate',
+      melatoninTiming: 'Not required for same-hemisphere travel',
+    },
+  },
+  {
+    id: 'amalfi',
+    name: 'Amalfi Coast & Capri',
+    country: 'Italy',
+    region: 'Europe',
+    tagline: 'Terraced lemon orchards, azure cliffside trails, and Mediterranean cardiovascular diet',
+    description:
+      'Perched dramatic cliffs rising from the Tyrrhenian Sea, famous for the Path of the Gods trail, cold-pressed olive oils, and longevity-enhancing Mediterranean gastronomy. Requires knee and stair stability.',
+    heroImage:
+      'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1600&q=85',
+    coordinates: '40.6340° N, 14.6027° E',
+    timezone: 'CET (UTC+1)',
+    utcOffset: 1,
+    altitudeMeters: 200,
+    overallHealthScore: 94,
+    waterSafety: {
+      status: 'Safe',
+      rating: 'safe',
+      notes: 'Acquedotto campano municipal water is potable, safe, and heavily monitored.',
+    },
+    airQuality: {
+      aqi: 31,
+      rating: 'Pristine',
+      pm25: '7.1 µg/m³',
+      primaryAllergen: 'Olive tree pollen (early summer)',
+    },
+    climateRisk: {
+      uvIndex: 7,
+      humidity: '58%',
+      tempRange: '20°C – 29°C',
+      heatStressRisk: 'Moderate',
+    },
+    altitudeRisk: {
+      riskLevel: 'None',
+      advisory: 'Sentiero degli Dei reaches 630m. High stair-step verticality causes patellofemoral strain.',
+    },
+    vaccines: {
+      mandatory: ['Routine childhood series'],
+      recommended: ['Hepatitis A', 'Tetanus booster'],
+      endemicDiseases: ['Dehydration & Heat Exhaustion on steep climbs'],
+    },
+    healthAlerts: [
+      {
+        id: 'ama-1',
+        level: 'Info',
+        title: 'Midday Heat Management on Path of the Gods',
+        summary: 'Exposed limestone cliffs retain heat. Carry 2L electrolyte water per hiker before 10 AM.',
+        date: 'Updated today',
+      },
+    ],
+    hospitals: [
+      {
+        name: 'Ospedale Costa d’Amalfi (Castiglione di Ravello)',
+        address: 'Via Civita 42, 84010 Ravello SA',
+        phone: '+39-089-873-111',
+        englishProficient: true,
+        traumaCenter: true,
+        distance: 'Direct coastal road access',
+      },
+    ],
+    circadianAdvice: {
+      direction: 'Neutral',
+      recoveryDays: 1,
+      morningLight: '08:00 AM Mediterranean sea reflection walk',
+      eveningWindDown: '22:00 PM al fresco dining pacing',
+      melatoninTiming: '0.5mg if arriving from Americas',
+    },
+  },
+  {
+    id: 'serengeti',
+    name: 'Serengeti & Ngorongoro Crater',
+    country: 'Tanzania',
+    region: 'Africa',
+    tagline: 'Untamed savannah horizons, high-altitude caldera, and primal wildlife expeditions',
+    description:
+      'The cradle of wildlife migration. Spans vast savannah plains and the 2,200m volcanic caldera rim of Ngorongoro. Demands comprehensive malaria chemoprophylaxis, yellow fever validation, and dust airway defense.',
+    heroImage:
+      'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1600&q=85',
+    coordinates: '2.3333° S, 34.8333° E',
+    timezone: 'EAT (UTC+3)',
+    utcOffset: 3,
+    altitudeMeters: 1750,
+    overallHealthScore: 82,
+    waterSafety: {
+      status: 'Strict Purification Needed',
+      rating: 'danger',
+      notes: 'Do NOT drink tap water or unsealed borehole water. Use UV-treated or sealed bottled water exclusively.',
+    },
+    airQuality: {
+      aqi: 35,
+      rating: 'Moderate',
+      pm25: '9.8 µg/m³',
+      primaryAllergen: 'Fine red laterite dust during dry game drives',
+    },
+    climateRisk: {
+      uvIndex: 12,
+      humidity: '48%',
+      tempRange: '14°C – 28°C',
+      heatStressRisk: 'Moderate',
+    },
+    altitudeRisk: {
+      riskLevel: 'Mild',
+      advisory: 'Ngorongoro rim reaches 2,300m with cold nights; warm thermal layers essential.',
+    },
+    vaccines: {
+      mandatory: ['Yellow Fever certificate (mandatory if transiting endemic zone)', 'COVID-19'],
+      recommended: ['Hepatitis A & B', 'Typhoid', 'Rabies pre-exposure', 'Meningococcal', 'Cholera oral'],
+      endemicDiseases: ['Malaria (Plasmodium falciparum)', 'African Tick Bite Fever', "Traveler's Enteritis"],
+    },
+    healthAlerts: [
+      {
+        id: 'ser-1',
+        level: 'Warning',
+        title: 'Mandatory Malaria Chemoprophylaxis',
+        summary: 'Malarone (Atovaquone/Proguanil) or Doxycycline protocol must commence 1-2 days prior to entry.',
+        date: 'Updated today',
+      },
+      {
+        id: 'ser-2',
+        level: 'Advisory',
+        title: 'Safari Dust & Dry Eye Syndrome',
+        summary: 'Enclosed pop-up vehicles generate fine dust clouds. Bring preservative-free lubricating eye drops.',
+        date: 'Active',
+      },
+    ],
+    hospitals: [
+      {
+        name: 'Flying Doctors AMREF Air Ambulance Evacuation Base',
+        address: 'Wilson Airport / Kilimanjaro International Dispatch',
+        phone: '+254-20-699-3000',
+        englishProficient: true,
+        traumaCenter: true,
+        distance: 'Direct bush-strip air pickup link to Nairobi',
+      },
+      {
+        name: 'Arusha Lutheran Medical Centre (ALMC)',
+        address: 'Makongoro Road, Arusha, Tanzania',
+        phone: '+255-27-254-8030',
+        englishProficient: true,
+        traumaCenter: true,
+        distance: 'Regional base hospital (45 mins flight / 3 hrs drive)',
+      },
+    ],
+    circadianAdvice: {
+      direction: 'East',
+      recoveryDays: 3,
+      morningLight: '06:00 AM dawn game drive sunlight',
+      eveningWindDown: '20:30 PM campfire wind down with insect protective clothing',
+      melatoninTiming: '1mg at 21:30 PM',
+    },
+  },
+  {
+    id: 'bali',
+    name: 'Ubud & Bali Cultural Highlands',
+    country: 'Indonesia',
+    region: 'Asia',
+    tagline: 'Ayurvedic sanctuaries, emerald rice terraces, and holistic restoration',
+    description:
+      'The epicentre of global holistic wellness, yoga retreats, and sound therapy. Tropical microclimate requires active GI tract protection against "Bali Belly" and heat balance.',
+    heroImage:
+      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1600&q=85',
+    coordinates: '8.5069° S, 115.2625° E',
+    timezone: 'WITA (UTC+8)',
+    utcOffset: 8,
+    altitudeMeters: 220,
+    overallHealthScore: 86,
+    waterSafety: {
+      status: 'Strict Purification Needed',
+      rating: 'danger',
+      notes: 'Tap water unsafe for drinking or brushing teeth. Ice must be tube-ice with government inspection seal.',
+    },
+    airQuality: {
+      aqi: 45,
+      rating: 'Moderate',
+      pm25: '11.5 µg/m³',
+      primaryAllergen: 'Incense smoke and seasonal biomass burning',
+    },
+    climateRisk: {
+      uvIndex: 11,
+      humidity: '84%',
+      tempRange: '24°C – 32°C',
+      heatStressRisk: 'High',
+    },
+    altitudeRisk: {
+      riskLevel: 'None',
+      advisory: 'Mount Batur sunrise climb reaches 1,717m; mild exertion altitude only.',
+    },
+    vaccines: {
+      mandatory: ['Routine WHO schedule'],
+      recommended: ['Hepatitis A & B', 'Typhoid', 'Rabies (stray monkey/dog bites in Ubud Monkey Forest)'],
+      endemicDiseases: ['Dengue Fever', 'Bacterial Gastroenteritis (Bali Belly)', 'Rabies'],
+    },
+    healthAlerts: [
+      {
+        id: 'bal-1',
+        level: 'Warning',
+        title: 'Monkey Forest Rabies & Bite Warning',
+        summary: 'Do not carry visible fruit or touch macaques. Any scratch requires immediate rabies immunoglobulin.',
+        date: 'Updated today',
+      },
+    ],
+    hospitals: [
+      {
+        name: 'BIMC Siloam Hospital Ubud & Nusa Dua (Western Standards)',
+        address: 'Jl. Raya Sanggingan No.88X, Kedewatan, Ubud',
+        phone: '+62-361-977-990',
+        englishProficient: true,
+        traumaCenter: true,
+        distance: 'Directly in central Ubud',
+      },
+    ],
+    circadianAdvice: {
+      direction: 'East',
+      recoveryDays: 4,
+      morningLight: '07:00 AM outdoor yoga sun salutation',
+      eveningWindDown: '21:00 PM herbal chamomile & sound bath',
+      melatoninTiming: '1mg for 3 days post-arrival',
+    },
+  },
+  {
+    id: 'patagonia',
+    name: 'Torres del Paine & Southern Fjords',
+    country: 'Chile',
+    region: 'Americas',
+    tagline: 'Granite spires, icefields, roaring westerlies, and subantarctic resilience',
+    description:
+      'Spectacular glacial wilderness with extreme katabatic winds up to 100 km/h and rapid four-seasons-in-one-day weather swings. Tests physical stamina, hypothermia prevention, and joint stability.',
+    heroImage:
+      'https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=1600&q=85',
+    coordinates: '51.2532° S, 72.8814° W',
+    timezone: 'CLST (UTC-3)',
+    utcOffset: -3,
+    altitudeMeters: 900,
+    overallHealthScore: 92,
+    waterSafety: {
+      status: 'Safe',
+      rating: 'safe',
+      notes: 'Direct glacial streams in Torres del Paine are exceptionally potable; check for guanaco herds upstream.',
+    },
+    airQuality: {
+      aqi: 6,
+      rating: 'Pristine',
+      pm25: '1.2 µg/m³',
+      primaryAllergen: 'Zero allergenic load',
+    },
+    climateRisk: {
+      uvIndex: 6,
+      humidity: '52%',
+      tempRange: '4°C – 17°C',
+      heatStressRisk: 'Low',
+    },
+    altitudeRisk: {
+      riskLevel: 'Mild',
+      advisory: 'French Valley climbs reach 800m. Major risk is wind-chill induced rapid hypothermia.',
+    },
+    vaccines: {
+      mandatory: ['Routine Childhood series'],
+      recommended: ['Hepatitis A', 'Tetanus booster (essential for trail lacerations)'],
+      endemicDiseases: ['Hypothermia', 'Guanaco tick bites', 'Ozone hole UV spikes in spring'],
+    },
+    healthAlerts: [
+      {
+        id: 'pat-1',
+        level: 'Warning',
+        title: 'Southern Ozone Hole UV Fluctuations',
+        summary: 'Antarctic vortex displacement can cause unexpected solar UV spikes despite cool ambient temperatures.',
+        date: 'Updated today',
+      },
+    ],
+    hospitals: [
+      {
+        name: 'Hospital Dr. Augusto Essmann Burgos (Puerto Natales)',
+        address: 'Avenida España 1450, Puerto Natales',
+        phone: '+56-61-245-1200',
+        englishProficient: true,
+        traumaCenter: true,
+        distance: '110 km from Park Administration (emergency SAR helicopter dispatch)',
+      },
+    ],
+    circadianAdvice: {
+      direction: 'Neutral',
+      recoveryDays: 2,
+      morningLight: '07:30 AM sunrise exposure over the horns',
+      eveningWindDown: '21:30 PM warm refuel with high-protein patagonian broth',
+      melatoninTiming: 'Not required for same meridian travel',
+    },
+  },
+];

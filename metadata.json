@@ -1,0 +1,6 @@
+{
+  "name": "Voyage Wellness Compass",
+  "description": "Premium travel health and wellness platform for global travelers, circadian alignment, destination health intelligence, and personalized travel medicine protocols.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
